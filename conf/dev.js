@@ -5,15 +5,17 @@
  * @description
  */
 
-const webpack = require('webpack');
-const path = require('path');
+const webpack = require('webpack')
+const path = require('path')
 const ip = require('ip')
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 
 const config = {
-  entry: path.resolve(__dirname, '../src'),
+  entry: [
+    path.resolve(__dirname, '../demo')
+  ],
   cache: true,
   devtool: 'eval-source-map',
   output: {
@@ -34,13 +36,13 @@ const config = {
     // https://github.com/ampedandwired/html-webpack-plugin
     new FriendlyErrorsPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '../src/index.html')
+      template: path.resolve(__dirname, '../demo/index.html')
     })
   ],
   devServer: {
     host: ip.address(),
     headers: { "Access-Control-Allow-Origin": "*" }
   },
-};
+}
 
-module.exports = config;
+module.exports = config
