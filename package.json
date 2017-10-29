@@ -1,0 +1,29 @@
+{
+  "name": "mvvm",
+  "version": "0.0.1",
+  "description": "通过具体代码的实现，进一步领会 MVVM",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --config ./conf/dev.js --inline --hot --port 8888",
+    "build": "node build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "王斐",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.0.0",
+    "babel-eslint": "^6.0.0",
+    "babel-loader": "^6.0.0",
+    "babel-polyfill": "6.23.0",
+    "babel-preset-es2015": "6.13.2",
+    "babel-preset-stage-2": "6.22.0",
+    "chalk": "^2.3.0",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "html-webpack-plugin": "^2.30.1",
+    "ip": "^1.1.5",
+    "ora": "^1.3.0",
+    "rimraf": "^2.6.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.3"
+  }
+}
